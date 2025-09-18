@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ritik-portfolio/static/css/main.5b987323.css",
+    "main.js": "/ritik-portfolio/static/js/main.164a88f0.js",
+    "static/media/profile.jpg": "/ritik-portfolio/static/media/profile.ee73040a4184caf122ed.jpg",
+    "index.html": "/ritik-portfolio/index.html",
+    "main.5b987323.css.map": "/ritik-portfolio/static/css/main.5b987323.css.map",
+    "main.164a88f0.js.map": "/ritik-portfolio/static/js/main.164a88f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b987323.css",
+    "static/js/main.164a88f0.js"
+  ]
+}
