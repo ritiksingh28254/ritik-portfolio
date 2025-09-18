@@ -1,0 +1,63 @@
+.experience {
+    padding: 50px 20px;
+    background-color: #121224; /* Dark section background */
+    text-align: center;
+    color: white;
+  }
+  
+  .experience h2 {
+    color: #4DB5FF; /* Section title white */
+    margin-bottom: 40px;
+  }
+  
+  .experience-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .experience-box {
+    background-color: #2A2A4A; /* Lighter than #1E1E37 */
+    color: white;
+    padding: 30px 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+  
+  .experience-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Role title */
+  .experience-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color:  #4DB5FF; /* Bright blue */
+  }
+  
+  /* Company name */
+  .experience-box h4 {
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #ffffff; /* White */
+  }
+  
+  /* Duration */
+  .experience-box .duration {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: white; /* Bright blue */
+  }
+  
+  .experience-box p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ffffff;
+  }
+  

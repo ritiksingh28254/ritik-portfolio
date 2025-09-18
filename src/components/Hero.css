@@ -1,0 +1,64 @@
+.hero {
+    background: #121224;
+    color: white;
+    padding: 120px 80px; /* more padding on sides */
+  }
+  
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* push content to the left */
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4DB5FF;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero h1 span {
+    color: #4DB5FF;
+  }
+  
+  .hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    background: #4DB5FF;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background: #3a9edc; /* darker blue on hover */
+    transform: scale(1.05);
+  }
+  
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #4DB5FF; /* match theme */
+    color: #4DB5FF;
+  }
+  
+  .btn-outline:hover {
+    background: #4DB5FF;
+    color: #121224; /* contrast text */
+  }
+  

@@ -1,0 +1,26 @@
+.btn {
+  background: #4DB5FF;
+  padding: 50px 20px;
+  color: #1E1E37; /* dark text for visibility */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn:hover {
+  background: white;
+  color: #4DB5FF; /* highlight text color */
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #4DB5FF;
+  color: #4DB5FF;
+}
+
+.btn-outline:hover {
+  background: #4DB5FF;
+  color: #1E1E37; /* dark text for contrast */
+}

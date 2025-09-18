@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #121224;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); */
+}
+
+/* Stylish Name (Logo) */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.logo span {
+  color: #4DB5FF; /* highlight Raj */
+}
+
+/* Navigation List */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+/* Each menu item inside a box */
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: #2A2A4A; /* Box style */
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover and Active Effects */
+.navbar ul li a:hover,
+.navbar .active a {
+  background-color: #4DB5FF;
+  color: #121224;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

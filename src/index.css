@@ -1,0 +1,39 @@
+/* Overall page background */
+body {
+  background-color: #121224; /* Dark page background */
+  color: white;              /* Default text color white */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section titles and headings */
+h2, h3 {
+  color: white; /* Remove yellow/blue, make white */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Paragraphs */
+p {
+  color: #ffffff; /* White text for readability */
+}
+
+/* Buttons */
+.btn {
+  background: #4DB5FF;
+  padding: 50px 20px;
+  color: #1E1E37; /* dark text for visibility */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+}
+
+
+.btn:hover {
+  background: white;
+  color: #4DB5FF; /* highlight text color */
+}
+
