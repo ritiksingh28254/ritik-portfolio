@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ritik-portfolio/static/css/main.fd3a3f95.css",
+    "main.css": "/ritik-portfolio/static/css/main.7121cf1b.css",
     "main.js": "/ritik-portfolio/static/js/main.0a5213c3.js",
     "static/media/cloud1.png": "/ritik-portfolio/static/media/cloud1.cdf8a1df688df578a34f.png",
     "static/media/profile2.jpeg": "/ritik-portfolio/static/media/profile2.00d69b5c1832368a8bcc.jpeg",
     "index.html": "/ritik-portfolio/index.html",
-    "main.fd3a3f95.css.map": "/ritik-portfolio/static/css/main.fd3a3f95.css.map",
+    "main.7121cf1b.css.map": "/ritik-portfolio/static/css/main.7121cf1b.css.map",
     "main.0a5213c3.js.map": "/ritik-portfolio/static/js/main.0a5213c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd3a3f95.css",
+    "static/css/main.7121cf1b.css",
     "static/js/main.0a5213c3.js"
   ]
 }
