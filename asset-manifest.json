@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ritik-portfolio/static/css/main.5b987323.css",
-    "main.js": "/ritik-portfolio/static/js/main.164a88f0.js",
-    "static/media/profile.jpg": "/ritik-portfolio/static/media/profile.ee73040a4184caf122ed.jpg",
+    "main.css": "/ritik-portfolio/static/css/main.e6e16fc8.css",
+    "main.js": "/ritik-portfolio/static/js/main.55649cb4.js",
+    "static/media/profile2.jpeg": "/ritik-portfolio/static/media/profile2.00d69b5c1832368a8bcc.jpeg",
     "index.html": "/ritik-portfolio/index.html",
-    "main.5b987323.css.map": "/ritik-portfolio/static/css/main.5b987323.css.map",
-    "main.164a88f0.js.map": "/ritik-portfolio/static/js/main.164a88f0.js.map"
+    "main.e6e16fc8.css.map": "/ritik-portfolio/static/css/main.e6e16fc8.css.map",
+    "main.55649cb4.js.map": "/ritik-portfolio/static/js/main.55649cb4.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b987323.css",
-    "static/js/main.164a88f0.js"
+    "static/css/main.e6e16fc8.css",
+    "static/js/main.55649cb4.js"
   ]
 }
