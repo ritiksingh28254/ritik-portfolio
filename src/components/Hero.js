@@ -28,9 +28,9 @@ const Hero = () => {
             loop
           />
           <div className="hero-buttons">
-            {/* ✅ Download CV button */}
+            {/* ✅ Download CV button (make sure Ritik_cv.pdf is inside /public folder) */}
             <a
-              href="/Ritik_cv.pdf"  // Make sure Ritik_cv.pdf is inside the public folder
+              href="/Ritik_cv.pdf"
               download="Ritik_Raj_CV.pdf"
               className="btn"
             >

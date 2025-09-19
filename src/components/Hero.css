@@ -35,18 +35,23 @@
     margin-top: 30px;
     display: flex;
     gap: 20px;
+    /* padding: 12px 25px;
+    width: 120px; 
+    height: 20px; */
   }
   
   .btn {
     background: #4DB5FF;
     padding: 12px 25px;
-    color: white;
+    color: #1E1E37;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
+    border: none;
+    padding: 12px 25px !important;
   }
-  
+
   .btn:hover {
     background: #3a9edc; /* darker blue on hover */
     transform: scale(1.05);
