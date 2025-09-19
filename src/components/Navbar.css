@@ -66,7 +66,8 @@
    */
 
 
-   .navbar {
+ /* ----------------- Navbar ----------------- */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +77,15 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+  
+  /* Logo */
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
   }
   
   .logo {
@@ -84,12 +94,25 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
+    margin: 0;
   }
   
   .logo span {
     color: #4DB5FF;
   }
   
+  /* Tagline */
+  .tagline {
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap; /* Force single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Menu links */
   .navbar ul {
     list-style: none;
     display: flex;
@@ -114,24 +137,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
   
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 1.2;
-  }
-  
-  .logo {
-    margin: 0;
-  }
-  
-  .tagline {
-    font-size: 0.75rem;
-    color: white;
-    font-weight: 500;
-    margin: 0;
-  }
-  
   /* Hamburger Icon */
   .hamburger {
     display: none;
@@ -143,34 +148,33 @@
   /* ----------------- Mobile ----------------- */
   @media (max-width: 768px) {
     .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 15px 20px;
+      flex-direction: row; /* Keep logo + menu in one line */
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      padding: 10px 15px;
     }
   
     .logo-container {
-      align-items: center;
-      width: 100%;
-      margin-bottom: 10px;
-      text-align: center;
+      flex: 1;
+      margin-right: 10px;
+      align-items: flex-start;
+      text-align: left;
     }
   
     .tagline {
-      font-size: 0.7rem;
-      text-align: center;
+      font-size: 0.65rem;
     }
   
     .hamburger {
       display: block;
-      align-self: flex-end;
+      margin-left: auto;
     }
   
     .navbar ul {
       flex-direction: column;
       gap: 10px;
-      width: 100%;
-      align-items: center;
-      margin-top: 10px;
+      width: 200px;
       position: fixed;
       top: 60px;
       right: -100%;
@@ -179,6 +183,7 @@
       padding-top: 30px;
       transition: right 0.3s ease;
       z-index: 1001;
+      flex-wrap: nowrap;
     }
   
     .navbar ul.active {
@@ -215,7 +220,7 @@
     }
   
     .tagline {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
     }
   }
   

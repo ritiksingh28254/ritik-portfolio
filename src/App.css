@@ -1,3 +1,31 @@
+/* .btn {
+  background: #4DB5FF;
+  padding: 50px 20px;
+  color: #1E1E37;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn:hover {
+  background: white;
+  color: #4DB5FF; 
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #4DB5FF;
+  color: #4DB5FF;
+}
+
+.btn-outline:hover {
+  background: #4DB5FF;
+  color: #1E1E37; 
+} */
+
+
 .btn {
   background: #4DB5FF;
   padding: 50px 20px;
@@ -24,3 +52,30 @@
   background: #4DB5FF;
   color: #1E1E37; /* dark text for contrast */
 }
+
+/* ----------------- */
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .btn {
+    padding: 30px 15px; /* smaller padding for smaller screens */
+    font-size: 0.95rem;
+  }
+
+  .btn-outline {
+    padding: 28px 12px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 20px 10px;
+    font-size: 0.85rem;
+  }
+
+  .btn-outline {
+    padding: 18px 8px;
+    font-size: 0.85rem;
+  }
+}
+

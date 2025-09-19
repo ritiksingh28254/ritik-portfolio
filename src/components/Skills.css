@@ -89,35 +89,38 @@
 .skills {
     padding: 50px 20px;
     background: #121224;
-    text-align: center; /* Heading stays centered */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .skills h2 {
     color: #4DB5FF;
     margin-bottom: 40px;
-    position: relative; /* for underline */
+    position: relative;
     font-size: 1.5rem;
-    text-align: center; /* Heading centered */
+    text-align: center;
 }
 
-/* Blue line under heading */
 .skills h2::after {
     content: "";
     width: 80px;
     height: 3px;
     background: #4DB5FF;
     display: block;
-    margin: 10px auto 0 auto; /* center underline */
+    margin: 10px auto 0 auto;
     border-radius: 2px;
 }
 
 .skills-box-container {
     display: flex;
-    justify-content: center; /* Boxes centered */
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 0 auto; /* center container */
+    margin: 0 auto;
     max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .skills-box {
@@ -129,7 +132,8 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     border: 2px solid #4DB5FF;
-    text-align: left; /* content inside box aligns left */
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .skills-box:hover {
@@ -177,13 +181,13 @@
 }
 
 /* ----------------- */
-/* ✅ Mobile Friendly */
-/* ----------------- */
+/* Mobile Friendly */
 @media (max-width: 768px) {
     .skills-box-container {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        padding: 0 10px;
     }
 
     .skills-box {
@@ -194,21 +198,14 @@
     .skills h2 {
         font-size: 1.3rem;
     }
-
-    .skills-box h3 {
-        font-size: 1.1rem;
-    }
-
-    .skill-name {
-        font-size: 1rem;
-    }
-
-    .skill-desc {
-        font-size: 0.85rem;
-    }
 }
 
 @media (max-width: 480px) {
+    .skills-box-container {
+        gap: 15px;
+        padding: 0 5px;
+    }
+
     .skills-box {
         width: 100%;
         padding: 15px;
@@ -216,17 +213,5 @@
 
     .skills h2 {
         font-size: 1.2rem;
-    }
-
-    .skills-box h3 {
-        font-size: 1rem;
-    }
-
-    .skill-name {
-        font-size: 0.95rem;
-    }
-
-    .skill-desc {
-        font-size: 0.8rem;
     }
 }

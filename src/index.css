@@ -1,10 +1,52 @@
-/* Overall page background */
-body {
+/* body {
+  background-color: #121224;
+  color: white;             
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3 {
+  color: white; 
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+p {
+  color: #ffffff; 
+}
+
+.btn {
+  background: #4DB5FF;
+  padding: 50px 20px;
+  color: #1E1E37; 
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+}
+
+
+.btn:hover {
+  background: white;
+  color: #4DB5FF; 
+}
+ */
+
+ /* Overall page background */
+ body {
   background-color: #121224; /* Dark page background */
   color: white;              /* Default text color white */
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+/* Prevent sticky navbar from cutting sections */
+section {
+  padding-top: 120px;       /* space above content so navbar doesn't cover it */
+  scroll-margin-top: 120px; /* ensures anchor links scroll correctly below navbar */
 }
 
 /* Section titles and headings */
@@ -31,9 +73,39 @@ p {
   border: none;
 }
 
-
 .btn:hover {
   background: white;
   color: #4DB5FF; /* highlight text color */
 }
 
+/* ----------------- */
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  h2, h3 {
+    font-size: 1.5rem; /* scale down headings */
+  }
+
+  p {
+    font-size: 0.95rem; /* smaller text */
+  }
+
+  .btn {
+    padding: 30px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2, h3 {
+    font-size: 1.2rem; /* smaller for phones */
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 20px 10px;
+    font-size: 0.85rem;
+  }
+}

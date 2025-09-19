@@ -128,6 +128,7 @@
 .contact p {
     color: white;
     margin-bottom: 40px;
+    font-size: 1rem;
 }
 
 .contact-options {
@@ -172,7 +173,7 @@
 }
 
 .contact-box a:hover {
-    background: white;
+    background: #e0e0e0; /* slight hover effect */
 }
 
 .contact-form {
@@ -189,6 +190,8 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     resize: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-form button {
@@ -208,7 +211,6 @@
 
 /* ----------------- */
 /* ✅ Mobile Friendly */
-/* ----------------- */
 @media (max-width: 768px) {
     .contact-options {
         flex-direction: column;
@@ -223,6 +225,20 @@
     .contact-form {
         max-width: 90%;
     }
+
+    .contact p {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-icon {
+        font-size: 1.8rem;
+    }
+
+    .contact-box a {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -232,16 +248,22 @@
 
     .contact p {
         font-size: 0.9rem;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .contact-icon {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+
+    .contact-box {
+        width: 100%;
+        padding: 15px;
     }
 
     .contact-box a {
-        padding: 7px 12px;
-        font-size: 0.9rem;
+        padding: 7px 10px;
+        font-size: 0.85rem;
     }
 
     .contact-form input,
@@ -252,6 +274,6 @@
 
     .contact-form button {
         padding: 10px;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 }

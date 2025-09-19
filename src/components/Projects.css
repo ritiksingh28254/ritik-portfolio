@@ -72,23 +72,25 @@
 
 .projects {
     padding: 50px 20px;
-    background-color: #121224; /* Dark section background */
+    background-color: #121224;
     text-align: center;
     color: white;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .projects h2 {
     color: #4DB5FF;
     margin-bottom: 40px;
-    position: relative; /* for the line */
+    position: relative;
     font-size: 1.5rem;
 }
 
 .projects h2::after {
     content: "";
-    width: 80px;           /* line width */
-    height: 3px;           /* line thickness */
-    background: #4DB5FF;   /* line color */
+    width: 80px;
+    height: 3px;
+    background: #4DB5FF;
     display: block;
     margin: 10px auto 0 auto;
     border-radius: 2px;
@@ -100,6 +102,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Individual project boxes */
@@ -113,6 +117,7 @@
     transition: all 0.3s ease;
     text-align: left;
     border: 2px solid #4DB5FF;
+    box-sizing: border-box;
 }
 
 .project-box:hover {
@@ -144,13 +149,13 @@
 }
 
 /* ----------------- */
-/* ✅ Mobile Friendly */
-/* ----------------- */
+/* Mobile Friendly */
 @media (max-width: 768px) {
     .projects-container {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        padding: 0 10px;
     }
 
     .project-box {
@@ -161,21 +166,14 @@
     .projects h2 {
         font-size: 1.3rem;
     }
-
-    .project-box h3 {
-        font-size: 1.1rem;
-    }
-
-    .project-box h4 {
-        font-size: 0.9rem;
-    }
-
-    .project-box ul li {
-        font-size: 0.9rem;
-    }
 }
 
 @media (max-width: 480px) {
+    .projects-container {
+        gap: 15px;
+        padding: 0 5px;
+    }
+
     .project-box {
         width: 100%;
         padding: 15px;
@@ -183,17 +181,5 @@
 
     .projects h2 {
         font-size: 1.2rem;
-    }
-
-    .project-box h3 {
-        font-size: 1rem;
-    }
-
-    .project-box h4 {
-        font-size: 0.85rem;
-    }
-
-    .project-box ul li {
-        font-size: 0.85rem;
     }
 }
