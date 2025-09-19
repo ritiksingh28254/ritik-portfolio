@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="hero-buttons">
             {/* ✅ Download CV button */}
             <a
-              href="/Ritik_cv.pdf"
+              href="/Ritik_cv.pdf"  // Make sure Ritik_cv.pdf is inside the public folder
               download="Ritik_Raj_CV.pdf"
               className="btn"
             >
