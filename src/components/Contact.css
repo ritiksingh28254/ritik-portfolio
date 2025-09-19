@@ -167,15 +167,33 @@
     margin-bottom: 15px;
 }
 
+.contact-box {
+    background: #1e1e37;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    border: 2px solid #4DB5FF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* centers icon, text, button horizontally */
+}
+
 .contact-box a {
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
     color: #4DB5FF;
-    background: white;
+    background: white; /* keep button white */
     padding: 8px 15px;
     border-radius: 5px;
     transition: 0.3s;
+}
+
+.contact-box a:hover {
+    background: #e0e0e0; /* slight hover effect on hover */
 }
 
 .contact-box a:hover {
