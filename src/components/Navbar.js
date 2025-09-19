@@ -26,13 +26,17 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">Ritik <span>Raj</span></h2>
+      <div className="logo-container">
+        <h2 className="logo">Ritik <span>Raj</span></h2>
+        <p className="tagline">🌍 Actively seeking opportunities || Ready to relocate globally.</p>
+      </div>
       <ul>
         <li className={active === "hero" ? "active" : ""}><a href="#hero">Home</a></li>
         <li className={active === "about" ? "active" : ""}><a href="#about">About</a></li>
         <li className={active === "experience" ? "active" : ""}><a href="#experience">Experience</a></li>
         <li className={active === "projects" ? "active" : ""}><a href="#projects">Projects</a></li>
         <li className={active === "skills" ? "active" : ""}><a href="#skills">Skills</a></li>
+        <li className={active === "certificates" ? "active" : ""}><a href="#certificates">Certificates</a></li>
         <li className={active === "contact" ? "active" : ""}><a href="#contact">Contact</a></li>
       </ul>
     </nav>

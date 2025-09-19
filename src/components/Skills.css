@@ -1,49 +1,89 @@
 .skills {
     padding: 50px 20px;
-    background:  #121224;
-    text-align: center;
-  }
-  
-  .skills h2 {
-    color:  #4DB5FF;
+    background: #121224;
+    text-align: center; /* Heading stays centered */
+}
+
+.skills h2 {
+    color: #4DB5FF;
     margin-bottom: 40px;
-  }
-  
-  .skills-box-container {
+    position: relative; /* for underline */
+    font-size: 1.5rem;
+    text-align: center; /* Heading centered */
+}
+
+/* Blue line under heading */
+.skills h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #4DB5FF;
+    display: block;
+    margin: 10px auto 0 auto; /* center underline */
+    border-radius: 2px;
+}
+
+.skills-box-container {
     display: flex;
-    justify-content: center; /* center horizontally */
-    gap: 30px;               /* space between the boxes */
-    flex-wrap: wrap;          /* stack on smaller screens */
-  }
-  
-  .skills-box {
-    background:  #2A2A4A; /* Dark navy background */
+    justify-content: center; /* Boxes centered */
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto; /* center container */
+    max-width: 1200px;
+}
+
+.skills-box {
+    background: #2A2A4A;
     color: white;
     padding: 30px 20px;
-    width: 300px;          /* box width */
+    width: 300px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-  }
-  
-  .skills-box:hover {
+    border: 2px solid #4DB5FF;
+    text-align: left; /* content inside box aligns left */
+}
+
+.skills-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-  }
-  
-  .skills-box h3 {
-    color:  #4DB5FF; /* Yellow for title */
+}
+
+.skills-box h3 {
+    color: #4DB5FF;
     margin-bottom: 20px;
-  }
-  
-  .skills-box ul {
+    text-align: left;
+}
+
+.skills-box ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .skills-box li {
-    color: #ffffff;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.dot {
+    color: #4DB5FF;
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.skill-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-left: 18px;
+}
+
+.skill-desc {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-left: 18px;
+    font-weight: 400;
+    margin-top: 2px;
+}

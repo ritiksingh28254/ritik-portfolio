@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <h2>Get in Touch</h2>
-      <p>Contact me via Email, Messenger or WhatsApp</p>
+      <p>Contact me via Email, linkedin or WhatsApp</p>
 
       <div className="contact-options">
         <div className="contact-box">
@@ -32,7 +32,7 @@ const Contact = () => {
           <FaLinkedin className="contact-icon" />
           <h4>linkedin</h4>
           <p>Ritik Raj</p>
-          <a href="www.linkedin.com/in/ritikraj62" target="_blank" rel="noreferrer">Send a message</a>
+          <a href="https://www.linkedin.com/in/ritikraj62" target="_blank" rel="noreferrer">Send a message</a>
         </div>
 
         <div className="contact-box">

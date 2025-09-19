@@ -1,0 +1,93 @@
+.certificates {
+    background-color: #121224;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .certificates h2 {
+    color: #4DB5FF;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .certificates h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #4DB5FF;
+    display: block;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+  }
+  
+  /* Grid container */
+  .certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Certificate Card */
+  .certificate-box {
+    background-color: #2A2A4A;
+    border: 2px solid #4DB5FF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+  }
+  
+  .certificate-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Certificate image */
+  .certificate-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4DB5FF;
+  }
+  
+  /* Title and text */
+  .certificate-box h3 {
+    font-size: 1.1rem;
+    color: #4DB5FF;
+    margin-bottom: 8px;
+  }
+  
+  .certificate-box .org {
+    font-size: 0.95rem;
+    color: #ddd;
+    margin-bottom: 6px;
+  }
+  
+  .certificate-box .year {
+    font-size: 0.85rem;
+    color: #aaa;
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  /* Download button */
+  .btn-download {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #4DB5FF;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-download:hover {
+    background: #3a9bdc;
+  }
+  

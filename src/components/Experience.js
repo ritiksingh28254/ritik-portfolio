@@ -5,7 +5,7 @@ const experiences = [
   {
     role: "Data Engineer",
     company: "Virtusa",
-    duration: "Jan 2024 – Present",
+    duration: "Jan 2024 - Present",
     description: "Working on data migration projects, Airflow DAGs, and ETL pipelines."
   },
   {
@@ -19,7 +19,7 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experience" className="experience">
-      <h2>Experience</h2>
+      <h2>EXPERIENCE</h2>
       <div className="experience-container">
         {experiences.map((exp, index) => (
           <div className="experience-box" key={index}>
