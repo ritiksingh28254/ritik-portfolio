@@ -112,6 +112,7 @@
     margin-bottom: 10px;
     position: relative;
     font-size: 1.5rem;
+    text-align: center; /* center heading */
 }
 
 /* Blue line under heading */
@@ -129,25 +130,30 @@
     color: white;
     margin-bottom: 40px;
     font-size: 1rem;
+    text-align: center; /* center tagline */
 }
 
+/* Grid layout for boxes like certificates */
 .contact-options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
 }
 
 .contact-box {
     background: #1e1e37;
     padding: 20px;
-    width: 250px;
+    /* width: 100%; */
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
     border: 2px solid #4DB5FF;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contact-box:hover {
@@ -173,7 +179,7 @@
 }
 
 .contact-box a:hover {
-    background: #e0e0e0; /* slight hover effect */
+    background: #e0e0e0;
 }
 
 .contact-form {
@@ -213,12 +219,11 @@
 /* ✅ Mobile Friendly */
 @media (max-width: 768px) {
     .contact-options {
-        flex-direction: column;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
     }
 
     .contact-box {
-        width: 90%;
         padding: 18px;
     }
 
@@ -256,14 +261,20 @@
         margin-bottom: 12px;
     }
 
+    .contact-options {
+        grid-template-columns: 1fr; /* single column on small screens */
+        gap: 15px;
+    }
+
     .contact-box {
-        width: 100%;
         padding: 15px;
+        align-items: center; 
     }
 
     .contact-box a {
         padding: 7px 10px;
         font-size: 0.85rem;
+        
     }
 
     .contact-form input,

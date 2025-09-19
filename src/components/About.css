@@ -93,6 +93,11 @@
     box-sizing: border-box;
 }
 
+#about {
+    padding-top: 70px; /* updated padding */
+    scroll-margin-top: 150px; /* ensures smooth scrolling offset */
+}
+
 .about h2 {
     color: #4DB5FF;
     margin-bottom: 25px;
