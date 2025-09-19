@@ -1,3 +1,91 @@
+/* .skills {
+    padding: 50px 20px;
+    background: #121224;
+    text-align: center; 
+}
+
+.skills h2 {
+    color: #4DB5FF;
+    margin-bottom: 40px;
+    position: relative; 
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.skills h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #4DB5FF;
+    display: block;
+    margin: 10px auto 0 auto; 
+    border-radius: 2px;
+}
+
+.skills-box-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.skills-box {
+    background: #2A2A4A;
+    color: white;
+    padding: 30px 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid #4DB5FF;
+    text-align: left; 
+}
+
+.skills-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.skills-box h3 {
+    color: #4DB5FF;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.skills-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.dot {
+    color: #4DB5FF;
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.skill-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-left: 18px;
+}
+
+.skill-desc {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-left: 18px;
+    font-weight: 400;
+    margin-top: 2px;
+} */
 .skills {
     padding: 50px 20px;
     background: #121224;
@@ -86,4 +174,59 @@
     margin-left: 18px;
     font-weight: 400;
     margin-top: 2px;
+}
+
+/* ----------------- */
+/* ✅ Mobile Friendly */
+/* ----------------- */
+@media (max-width: 768px) {
+    .skills-box-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .skills-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .skills h2 {
+        font-size: 1.3rem;
+    }
+
+    .skills-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+
+    .skill-desc {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .skills h2 {
+        font-size: 1.2rem;
+    }
+
+    .skills-box h3 {
+        font-size: 1rem;
+    }
+
+    .skill-name {
+        font-size: 0.95rem;
+    }
+
+    .skill-desc {
+        font-size: 0.8rem;
+    }
 }

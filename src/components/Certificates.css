@@ -1,16 +1,16 @@
-.certificates {
+/* .certificates {
     background-color: #121224;
     padding: 80px 20px;
     text-align: center;
-    min-height: 100vh; /* 🔽 ensures full screen height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* keeps title + grid aligned */
+    justify-content: flex-start; 
   }
   
   .certificates h2 {
     color: #4DB5FF;
-    font-size: 2rem; /* 🔽 larger for better visibility */
+    font-size: 2rem;
     margin-bottom: 40px;
     position: relative;
     text-transform: uppercase;
@@ -27,7 +27,6 @@
     border-radius: 2px;
   }
   
-  /* Grid container */
   .certificates-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -36,7 +35,6 @@
     margin: 0 auto;
   }
   
-  /* Certificate Card */
   .certificate-box {
     background-color: #2A2A4A;
     border: 2px solid #4DB5FF;
@@ -51,17 +49,15 @@
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
   }
   
-  /* Certificate image */
   .certificate-img {
     width: 100%;
-    height: 200px; /* 🔽 slightly taller for better visibility */
+    height: 200px; 
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
     border: 1px solid #4DB5FF;
   }
   
-  /* Title and text */
   .certificate-box h3 {
     font-size: 1.2rem;
     color: #4DB5FF;
@@ -81,7 +77,6 @@
     margin-bottom: 12px;
   }
   
-  /* Download button */
   .btn-download {
     display: inline-block;
     padding: 10px 18px;
@@ -96,4 +91,174 @@
   .btn-download:hover {
     background: #3a9bdc;
   }
-  
+   */
+
+   .certificates {
+    background-color: #121224;
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 100vh; /* ensures full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.certificates h2 {
+    color: #4DB5FF;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.certificates h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #4DB5FF;
+    display: block;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Grid container */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Certificate Card */
+.certificate-box {
+    background-color: #2A2A4A;
+    border: 2px solid #4DB5FF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.certificate-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Certificate image */
+.certificate-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4DB5FF;
+}
+
+/* Title and text */
+.certificate-box h3 {
+    font-size: 1.2rem;
+    color: #4DB5FF;
+    margin-bottom: 8px;
+}
+
+.certificate-box .org {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 6px;
+}
+
+.certificate-box .year {
+    font-size: 0.9rem;
+    color: #aaa;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* Download button */
+.btn-download {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #4DB5FF;
+    color: #fff;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #3a9bdc;
+}
+
+/* ----------------- */
+/* ✅ Mobile Friendly */
+/* ----------------- */
+@media (max-width: 768px) {
+    .certificates h2 {
+        font-size: 1.7rem;
+    }
+
+    .certificates-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .certificate-box {
+        padding: 15px;
+    }
+
+    .certificate-img {
+        height: 180px;
+    }
+
+    .certificate-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .certificate-box .org {
+        font-size: 0.95rem;
+    }
+
+    .certificate-box .year {
+        font-size: 0.85rem;
+    }
+
+    .btn-download {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates h2 {
+        font-size: 1.5rem;
+    }
+
+    .certificates-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .certificate-img {
+        height: 150px;
+    }
+
+    .certificate-box h3 {
+        font-size: 1rem;
+    }
+
+    .certificate-box .org {
+        font-size: 0.9rem;
+    }
+
+    .certificate-box .year {
+        font-size: 0.8rem;
+    }
+
+    .btn-download {
+        font-size: 0.85rem;
+        padding: 7px 12px;
+    }
+}

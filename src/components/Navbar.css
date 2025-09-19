@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,10 +8,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); */
 }
 
-/* Stylish Name (Logo) */
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -21,29 +19,26 @@
 }
 
 .logo span {
-  color: #4DB5FF; /* highlight Raj */
+  color: #4DB5FF; 
 }
 
-/* Navigation List */
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 15px;
 }
 
-/* Each menu item inside a box */
 .navbar ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 15px;
   border-radius: 8px;
-  background-color: #2A2A4A; /* Box style */
+  background-color: #2A2A4A; 
   transition: all 0.3s ease;
   display: inline-block;
 }
 
-/* Hover and Active Effects */
 .navbar ul li a:hover,
 .navbar .active a {
   background-color: #4DB5FF;
@@ -55,17 +50,172 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    line-height: 1.2; /* keeps title & tagline close */
+    line-height: 1.2; 
   }
   
   .logo {
-    margin: 0; /* remove extra space */
+    margin: 0; 
   }
   
   .tagline {
-    font-size: 0.75rem;   /* smaller subtitle */
+    font-size: 0.75rem;   
     color: white;
     font-weight: 500;
-    margin: 0;            /* no margin gap */
+    margin: 0;            
+  }
+   */
+
+
+   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #121224;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  .logo span {
+    color: #4DB5FF;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: #2A2A4A;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .navbar ul li a:hover,
+  .navbar .active a {
+    background-color: #4DB5FF;
+    color: #121224;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+  }
+  
+  .logo {
+    margin: 0;
+  }
+  
+  .tagline {
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4DB5FF;
+  }
+  
+  /* ----------------- Mobile ----------------- */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+  
+    .logo-container {
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    .tagline {
+      font-size: 0.7rem;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: block;
+      align-self: flex-end;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
+      position: fixed;
+      top: 60px;
+      right: -100%;
+      background-color: #121224;
+      height: calc(100% - 60px);
+      padding-top: 30px;
+      transition: right 0.3s ease;
+      z-index: 1001;
+    }
+  
+    .navbar ul.active {
+      right: 0;
+    }
+  
+    .navbar ul li a {
+      width: 80%;
+      text-align: center;
+      padding: 12px;
+    }
+  }
+  
+  /* Overlay when menu is open */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+  }
+  
+  /* Smaller screens */
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 18px;
+    }
+  
+    .navbar ul li a {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .tagline {
+      font-size: 0.65rem;
+    }
   }
   

@@ -1,8 +1,85 @@
+// import React, { useState, useEffect } from "react";
+// import "./Navbar.css";
+
+// const Navbar = () => {
+//   const [active, setActive] = useState("hero");
+
+//   const handleScroll = () => {
+//     const sections = [
+//       "hero",
+//       "about",
+//       "experience",
+//       "projects",
+//       "skills",
+//       "certificates",
+//       "contact",
+//     ];
+
+//     const scrollPos = window.scrollY + 100; // 🔽 reduced offset
+
+//     for (let id of sections) {
+//       const section = document.getElementById(id);
+//       if (section) {
+//         const top = section.offsetTop;
+//         const height = section.offsetHeight;
+
+//         if (scrollPos >= top && scrollPos < top + height) {
+//           setActive(id);
+//         }
+//       }
+//     }
+//   };
+
+//   useEffect(() => {
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <nav className="navbar">
+//       <div className="logo-container">
+//         <h2 className="logo">
+//           Ritik <span>Raj</span>
+//         </h2>
+//         <p className="tagline">
+//           🌍 Actively seeking opportunities || Ready to relocate globally.
+//         </p>
+//       </div>
+//       <ul>
+//         <li className={active === "hero" ? "active" : ""}>
+//           <a href="#hero">Home</a>
+//         </li>
+//         <li className={active === "about" ? "active" : ""}>
+//           <a href="#about">About</a>
+//         </li>
+//         <li className={active === "experience" ? "active" : ""}>
+//           <a href="#experience">Experience</a>
+//         </li>
+//         <li className={active === "projects" ? "active" : ""}>
+//           <a href="#projects">Projects</a>
+//         </li>
+//         <li className={active === "skills" ? "active" : ""}>
+//           <a href="#skills">Skills</a>
+//         </li>
+//         <li className={active === "certificates" ? "active" : ""}>
+//           <a href="#certificates">Certificates</a>
+//         </li>
+//         <li className={active === "contact" ? "active" : ""}>
+//           <a href="#contact">Contact</a>
+//         </li>
+//       </ul>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
+  const [menuOpen, setMenuOpen] = useState(false); // Mobile menu toggle
 
   const handleScroll = () => {
     const sections = [
@@ -15,7 +92,7 @@ const Navbar = () => {
       "contact",
     ];
 
-    const scrollPos = window.scrollY + 100; // 🔽 reduced offset
+    const scrollPos = window.scrollY + 100;
 
     for (let id of sections) {
       const section = document.getElementById(id);
@@ -35,40 +112,54 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Toggle mobile menu
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <nav className="navbar">
-      <div className="logo-container">
-        <h2 className="logo">
-          Ritik <span>Raj</span>
-        </h2>
-        <p className="tagline">
-          🌍 Actively seeking opportunities || Ready to relocate globally.
-        </p>
-      </div>
-      <ul>
-        <li className={active === "hero" ? "active" : ""}>
-          <a href="#hero">Home</a>
-        </li>
-        <li className={active === "about" ? "active" : ""}>
-          <a href="#about">About</a>
-        </li>
-        <li className={active === "experience" ? "active" : ""}>
-          <a href="#experience">Experience</a>
-        </li>
-        <li className={active === "projects" ? "active" : ""}>
-          <a href="#projects">Projects</a>
-        </li>
-        <li className={active === "skills" ? "active" : ""}>
-          <a href="#skills">Skills</a>
-        </li>
-        <li className={active === "certificates" ? "active" : ""}>
-          <a href="#certificates">Certificates</a>
-        </li>
-        <li className={active === "contact" ? "active" : ""}>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className="navbar">
+        <div className="logo-container">
+          <h2 className="logo">
+            Ritik <span>Raj</span>
+          </h2>
+          <p className="tagline">
+            🌍 Actively seeking opportunities || Ready to relocate globally.
+          </p>
+        </div>
+
+        {/* Hamburger Menu for Mobile */}
+        <div className="hamburger" onClick={toggleMenu}>
+          ☰
+        </div>
+
+        <ul className={menuOpen ? "active" : ""}>
+          <li className={active === "hero" ? "active" : ""}>
+            <a href="#hero" onClick={toggleMenu}>Home</a>
+          </li>
+          <li className={active === "about" ? "active" : ""}>
+            <a href="#about" onClick={toggleMenu}>About</a>
+          </li>
+          <li className={active === "experience" ? "active" : ""}>
+            <a href="#experience" onClick={toggleMenu}>Experience</a>
+          </li>
+          <li className={active === "projects" ? "active" : ""}>
+            <a href="#projects" onClick={toggleMenu}>Projects</a>
+          </li>
+          <li className={active === "skills" ? "active" : ""}>
+            <a href="#skills" onClick={toggleMenu}>Skills</a>
+          </li>
+          <li className={active === "certificates" ? "active" : ""}>
+            <a href="#certificates" onClick={toggleMenu}>Certificates</a>
+          </li>
+          <li className={active === "contact" ? "active" : ""}>
+            <a href="#contact" onClick={toggleMenu}>Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Overlay for mobile menu */}
+      {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+    </>
   );
 };
 

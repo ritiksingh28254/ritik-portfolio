@@ -1,7 +1,8 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
 import "./Hero.css";
-import profileImg from "../assets/profile2.jpeg"; // ✅ Import your image
+import profileImg from "../assets/profile2.jpeg"; 
+import codingImg from "../assets/cloud1.png"; // ✅ Add a right-side image
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
           <img src={profileImg} alt="Ritik Raj" />
         </div>
 
-        {/* Text Right */}
+        {/* Text Middle */}
         <div className="hero-text">
           <h1>
             Hi, I'm <span>Ritik Raj</span>
@@ -28,20 +29,18 @@ const Hero = () => {
             loop
           />
           <div className="hero-buttons">
-            {/* ✅ Download CV button (make sure Ritik_cv.pdf is inside /public folder) */}
-            <a
-              href="/Ritik_cv.pdf"
-              download="Ritik_Raj_CV.pdf"
-              className="btn"
-            >
+            <a href={process.env.PUBLIC_URL + "/Ritik_cv.pdf"} className="btn">
               Download CV
             </a>
-
-            {/* ✅ Contact button */}
             <a href="#contact" className="btn btn-outline">
               Let's Talk
             </a>
           </div>
+        </div>
+
+        {/* Right Side Image */}
+        <div className="hero-extra">
+          <img src={codingImg} alt="Coding Illustration" />
         </div>
       </div>
     </header>
