@@ -8,6 +8,8 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Certificates from "./components/Certificates";
+import ScrollToTop from "./components/ScrollToTop";
+import "./App.css";
 
 function App() {
   return (
@@ -18,9 +20,10 @@ function App() {
       <Experience />
       <Projects />
       <Skills />
-      <Certificates/> 
+      <Certificates />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

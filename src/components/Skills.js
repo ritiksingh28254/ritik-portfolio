@@ -1,60 +1,64 @@
 import React from "react";
+import ScrollReveal from "./ScrollReveal";
 import "./Skills.css";
 
-const frontendSkills = [
-    { skill: "Apache Airflow", desc: "I worked on more than 30+ DAGs" },
-    { skill: "AWS Lambda", desc: "Built serverless ETL pipelines" },
-    { skill: "AWS Athena", desc: "Performed analytical queries" },
-    { skill: "AWS Glue", desc: "Designed ETL workflows" },
-    { skill: "Python", desc: "Developed automation scripts" },
-    { skill: "DBT", desc: "Managed transformations and models" },
-  ];
-  
-  const backendSkills = [
-    { skill: "Team Management", desc: "Led a team of 5 engineers" },
-    { skill: "HTML", desc: "Built responsive layouts" },
-    { skill: "CSS", desc: "Styled web components" },
-    { skill: "Javascript", desc: "Created interactive UI" },
-    { skill: "Figma", desc: "Designed UI/UX mockups" },
-    { skill: "Canva", desc: "Created visual content" },
-  ];
-  
-  const Skills = () => {
-    return (
-      <section id="skills" className="skills">
-        <h2>WHAT SKILLS I HAVE</h2>
-        <div className="skills-box-container">
-          {/* ETL Skills */}
-          <div className="skills-box">
-            <h3>ETL Skills (Data Engineer)</h3>
+const etlSkills = [
+  { skill: "Apache Airflow", desc: "Built and maintained 30+ production DAGs" },
+  { skill: "AWS Lambda", desc: "Serverless ETL pipelines" },
+  { skill: "AWS Athena", desc: "Analytical queries on S3 data lakes" },
+  { skill: "AWS Glue", desc: "ETL workflow design and orchestration" },
+  { skill: "Python", desc: "Automation scripts and data processing" },
+  { skill: "DBT", desc: "Data transformations and model management" },
+];
+
+const softSkills = [
+  { skill: "Team Leadership", desc: "Led a team of 5 engineers" },
+  { skill: "HTML / CSS", desc: "Responsive web layouts" },
+  { skill: "JavaScript", desc: "Interactive UI development" },
+  { skill: "Figma", desc: "UI/UX design mockups" },
+  { skill: "Problem Solving", desc: "Complex data challenge resolution" },
+  { skill: "Communication", desc: "Cross-functional stakeholder collaboration" },
+];
+
+const Skills = () => {
+  return (
+    <section id="skills" className="skills">
+      <ScrollReveal>
+        <h2>Skills</h2>
+        <p className="section-subtitle">Technical expertise and professional strengths.</p>
+      </ScrollReveal>
+
+      <div className="skills-box-container">
+        <ScrollReveal delay={100}>
+          <div className="skills-box card">
+            <h3>ETL & Cloud</h3>
             <ul>
-              {frontendSkills.map((item, index) => (
+              {etlSkills.map((item, index) => (
                 <li key={index} className="skill-item">
-                  <span className="dot">•</span>
                   <span className="skill-name">{item.skill}</span>
-                  <div className="skill-desc">{item.desc}</div>
+                  <span className="skill-desc">{item.desc}</span>
                 </li>
               ))}
             </ul>
           </div>
-  
-          {/* Soft Skills */}
-          <div className="skills-box">
-            <h3>Soft Skills</h3>
+        </ScrollReveal>
+
+        <ScrollReveal delay={200}>
+          <div className="skills-box card">
+            <h3>Soft Skills & Tools</h3>
             <ul>
-              {backendSkills.map((item, index) => (
+              {softSkills.map((item, index) => (
                 <li key={index} className="skill-item">
-                  <span className="dot">•</span>
                   <span className="skill-name">{item.skill}</span>
-                  <div className="skill-desc">{item.desc}</div>
+                  <span className="skill-desc">{item.desc}</span>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
-      </section>
-    );
-  };
-  
-  export default Skills;
-  
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+export default Skills;

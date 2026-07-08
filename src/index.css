@@ -1,111 +1,175 @@
-/* body {
-  background-color: #121224;
-  color: white;             
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0d0d1a;
+  --bg-secondary: #121224;
+  --bg-card: #1a1a35;
+  --bg-card-hover: #22224a;
+  --accent: #4DB5FF;
+  --accent-glow: rgba(77, 181, 255, 0.25);
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8d0;
+  --text-muted: #8888a8;
+  --border: rgba(77, 181, 255, 0.35);
+  --radius: 14px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(77, 181, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(100, 60, 200, 0.06) 0%, transparent 50%);
+  color: var(--text-primary);
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-h2, h3 {
-  color: white; 
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-p {
-  color: #ffffff; 
-}
-
-.btn {
-  background: #4DB5FF;
-  padding: 50px 20px;
-  color: #1E1E37; 
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s;
-  border: none;
-}
-
-
-.btn:hover {
-  background: white;
-  color: #4DB5FF; 
-}
- */
-
- /* Overall page background */
- body {
-  background-color: #121224; /* Dark page background */
-  color: white;              /* Default text color white */
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Prevent sticky navbar from cutting sections */
 section {
-  padding-top: 120px;       /* space above content so navbar doesn't cover it */
-  scroll-margin-top: 120px; /* ensures anchor links scroll correctly below navbar */
+  padding: 80px 24px;
+  scroll-margin-top: 100px;
 }
 
-/* Section titles and headings */
-h2, h3 {
-  color: white; /* Remove yellow/blue, make white */
-  margin-bottom: 40px;
+h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
   text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
 }
 
-/* Paragraphs */
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 0 auto 48px;
+  max-width: 560px;
+  font-size: 1rem;
+}
+
 p {
-  color: #ffffff; /* White text for readability */
+  color: var(--text-secondary);
 }
 
-/* Buttons */
 .btn {
-  background: #4DB5FF;
-  padding: 50px 20px;
-  color: #1E1E37; /* dark text for visibility */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  padding: 12px 28px;
+  color: var(--bg-primary);
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
   border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn:hover {
-  background: white;
-  color: #4DB5FF; /* highlight text color */
+  background: #fff;
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
-/* ----------------- */
-/* Mobile Friendly */
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Scroll reveal animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Shared card style */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+}
+
 @media (max-width: 768px) {
-  h2, h3 {
-    font-size: 1.5rem; /* scale down headings */
+  section {
+    padding: 60px 16px;
+    scroll-margin-top: 80px;
   }
 
-  p {
-    font-size: 0.95rem; /* smaller text */
+  h2 {
+    font-size: 1.4rem;
   }
 
-  .btn {
-    padding: 30px 15px;
+  .section-subtitle {
     font-size: 0.95rem;
+    margin-bottom: 36px;
   }
 }
 
 @media (max-width: 480px) {
-  h2, h3 {
-    font-size: 1.2rem; /* smaller for phones */
-  }
-
-  p {
-    font-size: 0.9rem;
+  h2 {
+    font-size: 1.25rem;
   }
 
   .btn {
-    padding: 20px 10px;
-    font-size: 0.85rem;
+    padding: 10px 22px;
+    font-size: 0.9rem;
   }
 }

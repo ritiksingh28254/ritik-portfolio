@@ -1,33 +1,42 @@
 import React from "react";
+import ScrollReveal from "./ScrollReveal";
 import "./Experience.css";
 
 const experiences = [
   {
     role: "Data Engineer",
     company: "Virtusa",
-    duration: "Jan 2024 - Present",
-    description: "Working on data migration projects, Airflow DAGs, and ETL pipelines."
+    duration: "Jan 2024 – Present",
+    description:
+      "Working on data migration projects, Airflow DAGs, and ETL pipelines for enterprise clients.",
   },
   {
-    role: " Cloud Engineer Intern ",
+    role: "Cloud Engineer Intern",
     company: "Virtusa",
-    duration: "Jan 2023 - Apr 2023",
-    description: "Managed campaigns, analyzed data, and optimized marketing performance."
+    duration: "Jan 2023 – Apr 2023",
+    description:
+      "Assisted in cloud infrastructure setup, AWS services deployment, and automation scripts.",
   },
 ];
 
 const Experience = () => {
   return (
     <section id="experience" className="experience">
-      <h2>EXPERIENCE</h2>
+      <ScrollReveal>
+        <h2>Experience</h2>
+        <p className="section-subtitle">My professional journey in data and cloud engineering.</p>
+      </ScrollReveal>
+
       <div className="experience-container">
         {experiences.map((exp, index) => (
-          <div className="experience-box" key={index}>
-            <h3>{exp.role}</h3>
-            <h4>{exp.company}</h4>
-            <span className="duration">{exp.duration}</span>
-            <p>{exp.description}</p>
-          </div>
+          <ScrollReveal key={index} delay={index * 150}>
+            <div className="experience-box card">
+              <span className="experience-badge">{exp.duration}</span>
+              <h3>{exp.role}</h3>
+              <h4>{exp.company}</h4>
+              <p>{exp.description}</p>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>

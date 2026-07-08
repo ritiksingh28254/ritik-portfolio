@@ -1,46 +1,54 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
+import { FaDownload, FaComments } from "react-icons/fa";
 import "./Hero.css";
-import profileImg from "../assets/profile2.jpeg"; 
-import codingImg from "../assets/cloud1.png"; // ✅ Add a right-side image
+import profileImg from "../assets/profile2.jpeg";
+import codingImg from "../assets/cloud1.png";
 
 const Hero = () => {
   return (
     <header id="hero" className="hero">
+      <div className="hero-glow" aria-hidden="true" />
       <div className="hero-container">
-        {/* Profile Picture Left */}
         <div className="hero-image">
-          <img src={profileImg} alt="Ritik Raj" />
+          <div className="hero-image-ring">
+            <img src={profileImg} alt="Ritik Raj" />
+          </div>
         </div>
 
-        {/* Text Middle */}
         <div className="hero-text">
+          <p className="hero-greeting">Hello, I'm</p>
           <h1>
-            Hi, I'm <span>Ritik Raj</span>
+            <span>Ritik Raj</span>
           </h1>
-          <ReactTyped
-            strings={[
-              "Data Engineer",
-              "Cloud Specialist",
-              "Generative AI Enthusiast",
-            ]}
-            typeSpeed={40}
-            backSpeed={50}
-            loop
-          />
+          <div className="hero-typed">
+            <ReactTyped
+              strings={[
+                "Data Engineer",
+                "Cloud Specialist",
+                "Generative AI Enthusiast",
+              ]}
+              typeSpeed={45}
+              backSpeed={40}
+              loop
+            />
+          </div>
+          <p className="hero-desc">
+            I build scalable data pipelines, cloud-native solutions, and AI-powered
+            applications that drive real business impact.
+          </p>
           <div className="hero-buttons">
-            <a href={process.env.PUBLIC_URL + "/Ritik_cv.pdf"} className="btn">
-              Download CV
+            <a href={process.env.PUBLIC_URL + "/Ritik_cv.pdf"} className="btn" download>
+              <FaDownload /> Download CV
             </a>
             <a href="#contact" className="btn btn-outline">
-              Let's Talk
+              <FaComments /> Let's Talk
             </a>
           </div>
         </div>
 
-        {/* Right Side Image */}
         <div className="hero-extra">
-          <img src={codingImg} alt="Coding Illustration" />
+          <img src={codingImg} alt="Cloud and data engineering illustration" />
         </div>
       </div>
     </header>
